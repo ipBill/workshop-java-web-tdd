@@ -1,7 +1,7 @@
 node {
-   stage('pull-code') { // for display purposes
-        git 'https://github.com/up1/workshop-java-web-tdd'
-   }
+//    stage('pull-code') { // for display purposes
+//         git 'https://github.com/up1/workshop-java-web-tdd'
+//    }
    stage('build') {
         sh label: '', script: 'mvn clean test'
         junit 'target/surefire-reports/*.xml'
